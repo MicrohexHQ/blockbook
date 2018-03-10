@@ -37,4 +37,5 @@ RUN cd $GOPATH/src/blockbook/vendor/github.com/tecbot/gorocksdb && \
 
 WORKDIR $GOPATH/src/blockbook
 
-CMD go build -o /out/blockbook
+RUN go build -o /usr/local/bin/blockbook
+CMD cp /usr/local/bin/blockbook /out/blockbook
